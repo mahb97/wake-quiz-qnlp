@@ -1,0 +1,18 @@
+{
+  "male": ["gender_marked", "default_gender"],
+  "female": ["gender_marked", "opposite_list"],
+  "man": ["gender_marked"],
+  "woman": ["gender_marked"],
+  "boy": ["gender_marked"],
+  "girl": ["gender_marked"],
+  "husband": ["gender_role", "family"],
+  "wife": ["gender_role", "family"],
+  "father": ["gender_role", "family"],
+  "mother": ["gender_role", "family"],
+  "married": ["normative_status"],
+  "sex": ["normative_status"],
+  "servant": ["class_role", "labour"],
+  "secretary": ["class_role", "labour"],
+  "manager": ["class_role", "labour"],
+  "chief": ["class_role", "authority"]
+}
