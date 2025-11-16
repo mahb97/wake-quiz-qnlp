@@ -1,0 +1,24 @@
+{
+  "styles": [
+    {
+      "id": "plain_basic",
+      "label": "Plain (Basic English)",
+      "description": "Plain baseline style approximating Ogden's Basic English 850-word vocab."
+    },
+    {
+      "id": "joyce_dialogue",
+      "label": "Joyce dialogue",
+      "description": "Conversational style from Exiles, using adjacency pairs between speakers."
+    },
+    {
+      "id": "joyce_prose",
+      "label": "Joyce prose",
+      "description": "Non-Wake prose by JJ, for example Dubliners."
+    },
+    {
+      "id": "fw_i6_quiz",
+      "label": "Wake quiz chapter",
+      "description": "Book I Chapter 6 quiz register of FW."
+    }
+  ]
+}
