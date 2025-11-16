@@ -1,0 +1,9 @@
+train_file: "data/processed/qnlp_pairs.jsonl"
+val_file: "data/processed/qnlp_pairs_val.jsonl"
+
+output_dir: "models/wake_quiz_qnlp"
+backend: "numpy"        # / "pytket"
+epochs: 50
+batch_size: 16
+learning_rate: 1e-3
+seed: 42
