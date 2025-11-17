@@ -1,0 +1,32 @@
+# Basic English, Gender Bias, and the Plain Baseline
+
+This note documents how Ogden’s Basic English is used and critically constrained as a “plain” baseline in the Wake Quiz QNLP Playground. The aim is not to naturalise Basic English as a neutral core of the language, but to treat it as a historically situated, ideologically loaded artefact whose structure has to be made explicit before it can be safely repurposed as a diagnostic tool.
+
+## 1. Basic English as a constrained and partisan lexicon
+
+Ogden’s Basic English is a controlled vocabulary of 850 words, presented as a simplified, pedagogical, and international variety of English. In practice it functions as a small, prescriptive lexicon that encodes a particular early twentieth century, Anglophone, British, white, male imaginary of what counts as “basic” (a word best applied to the man himself). The macro-categories that organise the list (“operations,” “things,” “qualities”) are not self-evident partitions of experience, but a normative decomposition of the world into actions, objects, and attributes that are deemed salient from a specific social position. Basic English thus crystallises one historically dominant subject position and projects it as foundational, making the list a biased dataset. 
+
+Within this scheme, gender, kinship, labour, and authority are central organising dimensions. The vocabulary privileges heterosexual nuclear family structures, conventional occupational hierarchies, and a rigid sex binary, while conspicuously omitting lexical resources for naming alternative arrangements, non-binary identities, or structurally marginalised forms of labour. When this list is treated as a “plain” or “unmarked” vocabulary, those absences and asymmetries are silently carried into whatever model or metric is built on top of it.
+
+## 2. Gender and social imaginaries in Ogden’s list
+
+The treatment of gender in the Basic English list exemplifies the asymmetries that feminist linguistics and critical NLP have repeatedly described. Masculine forms are positioned as generic and unmarked, while feminine forms are marked and displaced. “Male” appears among the hundred “general” qualities, as if it were a neutral descriptor of persons, whereas “female” is relegated to a list of “opposites” that also contains “bad,” “bent,” “cruel,” “dead,” “dirty,” “false,” “feeble,” and “ill.” This is not a typographical curiosity but an explicit lexicalisation of a worldview in which masculinity occupies the centre of the grid and femininity is pushed to a margin coded as deviation or defect.
+
+Kinship and status terms such as “husband,” “wife,” “father,” “mother,” and “married” foreground the heterosexual nuclear family as the normative unit through which people are named and valued. Occupational and role terms such as “manager,” “secretary,” “servant,” “worker,” and “chief” embed a stratified social order and reproduce familiar patterns in which women’s identities are defined relationally and through supporting roles rather than as autonomous agents. From the perspective of contemporary work on linguistic sexism and gender bias, this is exactly the pattern in which masculine forms act as generics, feminine forms are semantically narrowed or derogated, and role nouns encode asymmetrical expectations about who does which work and under what description.
+
+## 3. Annotation schema for the Basic list
+
+Given this profile, Basic English cannot be used as a baseline without a layer of explicit annotation. Before the list is deployed in any diagnostic or generative capacity, each entry in the processed Basic vocabulary will be enriched with a compact schema at the word level. The annotation includes:
+
+- A semantic domain label (for example occupation and status, family and kinship, emotion and personality, body and appearance, sexuality and relationships, abstract social order), which makes it possible to inspect how heavily Basic English leans on particular social imaginaries.
+- A gender coding label that distinguishes lexically neutral items from masculine-coded items, feminine-coded items, relational gender terms whose primary function is to define women through men, and items that presuppose a rigid binary system with no lexical space for gender-diverse subjects.
+- One or more bias type labels that capture phenomena such as masculine generics, role stereotypes, appearance-focused descriptors, sexualising or derogatory terms, relational subordination, binary exclusivity, and, where appropriate, explicitly empowering or resistant terms.
+- A coarse severity score on a small ordinal scale, indicating how problematic the term is as part of an unmarked “plain” baseline and whether it should be retained, flagged, or excluded from the generative vocabulary associated with the Basic English style regime.
+
+These annotations are stored in a structured format so that they can be queried both qualitatively and quantitatively. They also ensure that any downstream metric built on Basic English can be unpacked in terms of whose world it indexes and which subject positions it renders legible.
+
+## 4. Implications for the Wake Quiz QNLP Playground
+
+In the Wake Quiz QNLP Playground, Basic English is used as one end of a style manifold that runs through Joyce’s dialogue and prose into the quiz chapter of *Finnegans Wake*. At no point is it treated as a transparent measure of simplicity, naturalness, or accessibility. Metrics such as the proportion of tokens in a generated answer that belong to the Basic vocabulary or the distribution of Basic tokens across induced semantic clusters are interpreted as indices of conformity to Ogden’s constrained lexicon and its attendant worldview. Moving toward the Basic end of the style slider is therefore explicitly read as moving toward a historically specific, male-centred, controlled language, not toward an abstract, ideology-free notion of plainness.
+
+Conversely, generated texts that fall away from the Basic vocabulary may be more complex, but they may also be refusing the constraints of Ogden’s grid in ways that matter for gendered and embodied characterisation. Quantitative diagnostics based on Basic English are therefore always paired with close reading and with the gender and bias annotations described above. The “plain_basic” regime in this project is therefore a contested baseline whose limitations are part of the object of study, especially when it is placed in tension with Joyce’s systematic distortion and rejection of such constrained lexicons.
