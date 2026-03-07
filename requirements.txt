@@ -1,20 +1,32 @@
+# wake-quiz-qnlp dependencies
+# pinned for march 2026 reproducibility on Colab T4 
 
-tbc:
+# QNLP
 
-torch
-transformers
-accelerate
-datasets
-peft
-bitsandbytes
+lambeq>=0.5.0
 
-lambeq
+# LM fine-tuning
 
-gradio
+torch>=2.0
+transformers>=5.0
+accelerate>=1.2
+datasets>=2.21.0
+peft>=0.14
+bitsandbytes>=0.45.0
+
+# demo
+
+gradio>=4.0
+
+# notebooks
+
 jupyter
 ipykernel
+
+# utilities
 
 numpy
 pandas
 tqdm
 pyyaml
+matplotlib
