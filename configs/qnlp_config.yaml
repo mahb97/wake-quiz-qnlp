@@ -1,9 +1,21 @@
+# QNLP compatibility classifier config
 train_file: "data/processed/qnlp_pairs.jsonl"
 val_file: "data/processed/qnlp_pairs_val.jsonl"
 
 output_dir: "models/wake_quiz_qnlp"
-backend: "numpy"        # / "pytket"
+
+# ansatz: "tensor" (classical), "iqp" (quantum sim), "sim14"
+ansatz: "tensor"
+ansatz_layers: 1
+
+# training
+backend: "pytorch"       # "pytorch" or "numpy" (quantum sim)
 epochs: 50
 batch_size: 16
 learning_rate: 1e-3
 seed: 42
+
+# parsing
+parser: "bobcat"
+simplify_diagrams: true
+log_parse_failures: true
